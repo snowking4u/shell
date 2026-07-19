@@ -12,3 +12,5 @@ schtasks /delete /tn "OneDriveSyncTask" /f
 
 ::check task 
 schtasks /query /tn "OneDriveSyncTask" /fo LIST /v
+
+::CreateObject("Wscript.Shell").Run "python ""C:\path\to\your\script.py""", 0, True
